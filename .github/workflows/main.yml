@@ -1,0 +1,58 @@
+name: NPM & WebP
+
+# 在 Release 发布时 或手动执行
+
+on:
+  release:
+     types:
+       - published
+
+  workflow_dispatch:
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    # Clone 仓库
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      # 安装 Node.js    
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: https://registry.npmjs.org/
+        
+      # rawimg/ 作为原始图片存储，webpimg/ 作为压缩图片存储处，最后合并。
+      # 安装相关插件，转换图片。
+      - name: Install & Convert
+        run: |
+          npm install -g webp-batch-convert
+          cwebp-batch --in rawimg --out webpimg -q 75 -quiet
+          mv webpimg/*.webp rawimg/
+          
+      # 发布 NPM 包
+      - name: Publish Package
+        run: |
+          git config --global user.email "icolabot@e.yfun.top"
+          git config --global user.name "iColaBot"
+          npm version patch
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          
+      # 删除 rawimg/ 和 webpimg/ 下的所有文件
+      - name: Delete Files
+        run: |
+          rm -rf webpimg/*
+          rm -rf rawimg/*
+          touch webpimg/.gitkeep
+          touch rawimg/.gitkeep
+          
+      - name: Push
+        run: |
+          git add -A
+          git commit -m "Publish"
+          git push origin master
