@@ -30,7 +30,7 @@ jobs:
       - name: Install & Convert
         run: |
           npm install -g webp-batch-convert
-          cwebp-batch --in rawimg --out webpimg -q 75 -quiet
+          cwebp-batch --in rawimg --out webpimg -q 75 
           mv webpimg/*.webp rawimg/
           
       # 发布 NPM 包
