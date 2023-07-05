@@ -55,4 +55,4 @@ jobs:
         run: |
           git add -A
           git commit -m "Publish"
-          git push origin master
+          git push origin main
