@@ -4,7 +4,10 @@ import requests
 
 telegram_token = sys.argv[1]
 user_id = [2]
-publish_id = [3]
+
+# 获得publish_id
+with open("package.json", "r") as f:
+    publish_id = f.readlines()[3][12:17]
 # 推送到telegram
 for path, dirs, files in os.walk("rawimg/"):
     for f in files:
