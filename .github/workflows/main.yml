@@ -48,10 +48,10 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.7 
+          
       # 推送到telegram
       - name: Post to telegram
         run: |
-          ls 
           python3 post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
           
           
