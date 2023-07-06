@@ -24,7 +24,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
-登录你的github账号，并fork仓库，点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
+登录你的github账号，下载代码并传到自己仓库（为了安全，不要公开仓库），点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
 
 ~~~
 # 准备工作里npm的Access Token
@@ -39,6 +39,10 @@ USER_ID --> 561661***
 CDN  -->  jsdelivr
 
 ~~~
+
+给予Action读写权限 setting --> action --> General， 选择Read and write permissions
+如下图：
+![](https://cdn.jsdelivr.net/npm/w2r@1.2.39/rawimg/cherbim_2023-07-07_00-34-12.webp)
 
 
 
