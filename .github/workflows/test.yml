@@ -35,8 +35,7 @@ jobs:
           telegram_token: ${{secrets.telegram_token}}
           user_id: ${{secrets.user_id}}
         run: |
-          python3 ./post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
-      
+          python3 post2tg.py
   
    
           
