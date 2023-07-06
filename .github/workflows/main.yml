@@ -59,6 +59,7 @@ jobs:
         env:
           telegram_token: ${{secrets.telegram_token}}
           user_id: ${{secrets.user_id}}
+          cdn: ${{secrets.cdn}}
         run: |
           python3 post2tg.py
           
