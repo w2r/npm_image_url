@@ -6,7 +6,7 @@
 
 cwebp转换图片格式大写结尾（JPG）失败，请确认上传图片格式为小写字母
 
-大家先别玩儿，等我明天更新，不能fork，涉及到隐私问题，
+不要fork仓库，容易泄露隐私，自己下载代码，新建仓库并上传大妈
 
 ##### 简介
 手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
@@ -24,7 +24,15 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
-登录你的github账号，下载代码并传到自己仓库（不会push就手动创建新的文件，然后复制粘贴内容），点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
+登录你的github账号，新建仓库，设置为私有（保护隐私），下载代码并push到自己仓库
+手动操作过程：
+第一步： https://github.com/w2r/npm_image_url/archive/refs/heads/main.zip 下载代码并解压，点击Add file，选择上传post2tg.py和package.json文件到仓库
+第二步： 然后点击新建文件，文件名为rawimg/.gitkeep ， 内容空白即可， 同理创建webpimg/.gitkeep
+第三部： 复制.github/workflows/main.yml里面的内容，然后点击action，选择new workflow，点击 set up a workflow yourself，把前面复制main.yml内容粘贴进去，最后保存
+
+
+
+点击仓库的setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
 
 ~~~
 # 准备工作里npm的Access Token
@@ -40,7 +48,8 @@ CDN  -->  jsdelivr
 
 ~~~
 
-给予Action读写权限 setting --> action --> General， 选择Read and write permissions
+给予Action读写权限
+setting --> action --> General， 选择Read and write permissions
 如下图：
 ![](https://cdn.jsdelivr.net/npm/w2r@1.2.39/rawimg/cherbim_2023-07-07_00-34-12.webp)
 
