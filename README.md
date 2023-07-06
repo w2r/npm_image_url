@@ -34,7 +34,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ![](https://cdn.jsdelivr.net/npm/w2r@1.2.44/rawimg/cherbim_2023-07-07_01-09-10.webp)
 
 
-第三部： 复制.github/workflows/main.yml里面的内容，然后点击action，选择new workflow，点击 set up a workflow yourself，把前面复制main.yml内容粘贴进去，最后保存
+第三步： 复制.github/workflows/main.yml里面的内容，然后点击action，选择new workflow，点击 set up a workflow yourself，把前面复制main.yml内容粘贴进去，最后保存
 ![](https://cdn.jsdelivr.net/npm/w2r@1.2.43/rawimg/cherbim_2023-07-07_01-00-23.webp)
 
 
