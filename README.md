@@ -49,6 +49,16 @@ post2tg.py 推送到telegram（默认文件无需修改）
 ##### 使用说明
 将图片文件上传至仓库的 `rawimg/` 文件夹下，也可以使用第三方工具上传（比如PicGo / UPic 等）
 github action的触发方式为Release更新，所以每次上传完图片，需要手动运行action或者更新Release
+手动运行action示意图：
+![](https://qyucloud.ml/t/aPe18K)
+
+
+
+更新Release运行action：
+点击右侧release， Draft a new release， 输入新的tag，其他不用修改，最后publish release
+![](https://qyucloud.ml/t/rXzPSS)
+
+
 
 
 
