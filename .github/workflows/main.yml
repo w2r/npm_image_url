@@ -43,10 +43,16 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
           
+      # 设置python
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7 
       # 推送到telegram
       - name: Post to telegram
         run: |
-          python3 post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
+          ls 
+          python post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
           
           
       # 删除 rawimg/ 和 webpimg/ 下的所有文件
