@@ -24,7 +24,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
-登录你的github账号，下载代码并传到自己仓库（为了安全，不要公开仓库），点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
+登录你的github账号，下载代码并传到自己仓库（不会push就手动创建新的文件，然后复制粘贴内容），点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
 
 ~~~
 # 准备工作里npm的Access Token
