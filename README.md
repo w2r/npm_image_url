@@ -8,11 +8,11 @@
 ![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
 	
 #####  代码说明
-github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) ，原版本及其难用，需要上传图片后，更新release触发action，还要自己手动修改链接，还不能看到图片，备份图片
+github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) ，原版本使用不方便，需要上传图片后，手动更新release触发action，还要自己修改文件链接，还不能看到图片以及备份图片
 本人仅做部分修改，具体修改内容如下：
 - 修改node-version，12.x --> 16.X
 - 安装python3及依赖库
-- 增加telegram推送，每次上传后，自动发送图片链接到telegram（相当于备份图片）
+- 增加telegram推送，每次github上传图片后后，自动发送图片链接到telegram（相当于备份图片）
 - 更改action的触发方式， release --> push
 
 ##### 准备工作
@@ -58,12 +58,10 @@ post2tg.py 推送到telegram（默认文件无需修改）
 
 ##### 使用说明
 将图片文件上传至仓库的 `rawimg/` 文件夹下，也可以使用第三方工具上传（比如PicGo / UPic 等）
-github action的触发方式为`rawimg/`文件夹push文件，所以每次上传完图片，会自动运行action
+github action的触发方式为`rawimg/`文件夹push文件，所以每次上传完图片，会自动运行action，并推送图片链接到tg
 
 
-
-
-##### 图片使用链接
+##### 图片使用链接介绍
 以 jsDelivr 为例，原图链接为：
 ~~~
 https://cdn.jsdelivr.net/npm/[package-name]@[version]/rawimg/[filename].[suffix]
@@ -90,7 +88,7 @@ https://unpkg.com/ # Unpkg
 ~~~
 ##### 特殊说明
 github action push代码有时抽风，导致push失败，需要手动修改一下版本号码
-详细如下如，如果action运行结果出现以下错误，请手动修改package.json的version（必须大于图中的版本号，否则npm 无法publish)
+详细如下如，如果action运行结果出现publish package错误，请手动修改package.json的version（必须大于workflow出错图中的版本号，否则npm 无法publish)
 
 ![](https://qyucloud.ml/t/unbTOC)
 
