@@ -34,7 +34,7 @@ jobs:
         run: |
           ls 
           python3 ./post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
-          
+          python3 --version
           
 
           
