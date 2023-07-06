@@ -3,7 +3,7 @@ name: NPM & WebP
 # 在 Release 发布时 或手动执行
 
 on:
-  create:
+  push:
      paths:
        - 'rawimg/**'
 
