@@ -2,7 +2,9 @@
 
 #### 利用npm和github action搭建一个简易图床
 
-bug： cwebp转换图片格式大写结尾（JPG）失败，请确认上传图片格式为小写字母
+##### 目前发现bug： 
+
+cwebp转换图片格式大写结尾（JPG）失败，请确认上传图片格式为小写字母
 
 ##### 简介
 手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
