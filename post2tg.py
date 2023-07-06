@@ -7,7 +7,7 @@ user_id = sys.argv[2]
 
 # 获得publish_id
 with open("package.json", "r") as f:
-    publish_id = f.readlines()[3][18:23]
+    publish_id = f.readlines()[2][14:19]
     print(publish_id)
     print(sys.argv[1])
     print(sys.argv[2])
