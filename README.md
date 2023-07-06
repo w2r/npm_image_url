@@ -1,13 +1,13 @@
 # npm_image_url
 #### 利用npm和github action搭建一个简易图床
-##### 说明
+##### 简介
 	利用github action自动上传图片到npm，并获得图片链接，推送到telegram，效果图如下：
 ![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
 	
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
-登录你的github账号，并fork仓库，点击setting， 选择Secrets and variable-->Action，新增三个Secrets ，分别如下
+登录你的github账号，并fork仓库，点击setting， 选择Secrets and variable-->Action，新增四个Secrets ，分别如下
 
 ~~~
 # 准备工作里npm的Access Token
