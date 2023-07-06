@@ -54,10 +54,13 @@ jobs:
         run: |
           pip3 install requests
           
-      # 推送到telegram
+       # 推送到telegram
       - name: Post to telegram
+        env:
+          telegram_token: ${{secrets.telegram_token}}
+          user_id: ${{secrets.user_id}}
         run: |
-          python3 ./post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
+          python3 post2tg.py
           
           
       # 删除 rawimg/ 和 webpimg/ 下的所有文件
