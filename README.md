@@ -5,7 +5,7 @@
 ##### 简介
 手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
 效果图如下：
-![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
+![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/ur9WrH)
 	
 #####  代码说明
 github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) ，原版本使用不方便，需要上传图片后，手动更新release触发action，还要自己修改文件链接，还不能看到图片以及备份图片
