@@ -42,11 +42,11 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      # 更新版本nubmer
+      # 更新version
       - name: Push
         run: |
           git add -A
-          git commit -m "update"
+          git commit -m "update version"
           git push origin main
           
       # 设置python
