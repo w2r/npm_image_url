@@ -49,6 +49,11 @@ jobs:
         with:
           python-version: 3.7 
           
+      # pip安装requests
+      - name: Pip install requests
+        run: |
+          pip3 install requests
+          
       # 推送到telegram
       - name: Post to telegram
         run: |
