@@ -57,7 +57,7 @@ jobs:
       # 推送到telegram
       - name: Post to telegram
         run: |
-          python3 post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
+          python3 ./post2tg.py ${{secrets.telegram_token}}  ${{secrets.user_id}}
           
           
       # 删除 rawimg/ 和 webpimg/ 下的所有文件
