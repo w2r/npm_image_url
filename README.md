@@ -3,8 +3,8 @@
 #### 利用npm和github action搭建一个简易图床
 
 ##### 简介
-	手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
-	效果图如下：
+手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
+效果图如下：
 ![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
 	
 #####  代码说明
