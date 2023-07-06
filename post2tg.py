@@ -8,6 +8,7 @@ user_id = [2]
 # 获得publish_id
 with open("package.json", "r") as f:
     publish_id = f.readlines()[3][12:17]
+    print(publish_id)
 # 推送到telegram
 for path, dirs, files in os.walk("rawimg/"):
     for f in files:
