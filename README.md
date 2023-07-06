@@ -1,10 +1,17 @@
 # npm_image_url
 
 #### 利用npm和github action搭建一个简易图床
+
 ##### 简介
 	利用github action自动上传图片到npm，并获得图片链接，推送到telegram，效果图如下：
 ![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
 	
+#####  代码说明
+github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) 本人仅做部分修改，具体修改内容如下：
+- 修改node-version，12.x --> 16.X
+- 安装python3及依赖库
+- 增加telegram推送，每次上传后，自动发送图片链接到telegram（备份图片）
+
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
