@@ -2,9 +2,8 @@ import os
 import sys
 import requests
 
-telegram_token = sys.argv[1]
-user_id = sys.argv[2]
-
+telegram_token = os.environ["telegram_token"]
+user_id = os.environ["user_id"]
 # 获得publish_id
 with open("package.json", "r") as f:
     publish_id = f.readlines()[2][14:20]
