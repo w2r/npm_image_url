@@ -3,14 +3,17 @@
 #### 利用npm和github action搭建一个简易图床
 
 ##### 简介
-	利用github action自动上传图片到npm，并获得图片链接，推送到telegram，效果图如下：
+	手动上传文件到github后，自动触发action上传图片到npm，并将图片链接推送到telegram，同时利用telegram备份图片
+	效果图如下：
 ![https://qyucloud.ml/t/K4iTaT](https://qyucloud.ml/t/K4iTaT)
 	
 #####  代码说明
-github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) 本人仅做部分修改，具体修改内容如下：
+github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](https://blog.yfun.top/posts/2876015612/) ，原版本及其难用，需要上传图片后，更新release触发action，还要自己手动修改链接，还不能看到图片，备份图片
+本人仅做部分修改，具体修改内容如下：
 - 修改node-version，12.x --> 16.X
 - 安装python3及依赖库
-- 增加telegram推送，每次上传后，自动发送图片链接到telegram（备份图片）
+- 增加telegram推送，每次上传后，自动发送图片链接到telegram（相当于备份图片）
+- 更改action的触发方式， release --> push
 
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
@@ -55,18 +58,7 @@ post2tg.py 推送到telegram（默认文件无需修改）
 
 ##### 使用说明
 将图片文件上传至仓库的 `rawimg/` 文件夹下，也可以使用第三方工具上传（比如PicGo / UPic 等）
-github action的触发方式为Release更新，所以每次上传完图片，需要手动运行action或者更新Release
-
-手动运行action示意图：
-![](https://qyucloud.ml/t/aPe18K)
-
-
-
-
-更新Release运行action：
-点击右侧release， Draft a new release， 输入新的tag，其他不用修改，最后publish release
-![](https://qyucloud.ml/t/rXzPSS)
-
+github action的触发方式为`rawimg/`文件夹push文件，所以每次上传完图片，会自动运行action
 
 
 
