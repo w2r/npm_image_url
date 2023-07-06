@@ -42,6 +42,12 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+      # 更新版本nubmer
+      - name: Push
+        run: |
+          git add -A
+          git commit -m "update"
+          git push origin main
           
       # 设置python
       - name: Set up Python 3.7
