@@ -1,4 +1,5 @@
 # npm_image_url
+
 #### 利用npm和github action搭建一个简易图床
 ##### 简介
 	利用github action自动上传图片到npm，并获得图片链接，推送到telegram，效果图如下：
@@ -30,16 +31,16 @@ CDN  -->  jsdelivr
 ##### 文件说明
 workfolws-->main.yml  action运行文件，无需修改
 
-rawimg和webpimg为临时储存文件夹，rawimg储存上传图片，webpimg储存压缩后的图片，推送的npm后，action会自动删除所有图片，避免github图片滥用封号
+rawimg和webpimg为临时储存文件夹，rawimg储存上传图片，webpimg储存压缩后的图片，推送到npm后，action会自动删除所有图片，避免github图片滥用封号
 
-package.json, 主要记录版本号和用户名称，name和version可自行修改（新手请勿修改）
+package.json, 主要记录版本号和用户名称，name和version可自行修改
 
 ~~~
 {
   "name": "w2r",
   "version": "1.2.22",
   "description": "版本配置文件，每次图片发布后github action会自动修改",
-  "author": "cherbim"
+  "author": "cherbim@MJJ"
 }
 ~~~
 	
@@ -77,7 +78,10 @@ https://shadow.elemecdn.com/npm/ # 饿了么
 https://unpkg.com/ # Unpkg
 ~~~
 ##### 特殊说明
+github action push代码有时抽风，导致push失败，需要手动修改一下版本号码
+详细如下如，如果action运行结果出现以下错误，请手动修改package.json的version（必须大于图中的版本号，否则npm 无法publish)
 
+![](https://qyucloud.ml/t/unbTOC)
 
 	
 
