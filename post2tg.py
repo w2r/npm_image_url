@@ -21,4 +21,4 @@ with open("package.json", "r") as f:
 for path, dirs, files in os.walk("rawimg/"):
     for f in files:
         if ".webp" in f:
-            requests.get(f"https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={user_id}&text=" + f"{cdn['cdn_name']}{publish_name }@{publish_version}/" + os.path.join(path, f).replace("\\", "/"))
+            requests.get(f"https://api.telegram.org/bot{telegram_token}/sendMessage?chat_id={user_id}&text=" + f"{cdn[cdn_name]}{publish_name }@{publish_version}/" + os.path.join(path, f).replace("\\", "/"))
