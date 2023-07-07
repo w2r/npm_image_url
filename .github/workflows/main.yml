@@ -24,8 +24,23 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: https://registry.npmjs.org/
+      # 安装python
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7 
+          
         
       # rawimg/ 作为原始图片存储，webpimg/ 作为压缩图片存储处，最后合并。
+      # 转换图片后缀
+      - name: IMG2img
+        run: |
+          sudo apt-get install rename -y
+          rename 's/.PNG/.png/' rawimg/*
+          rename 's/.JPG/.jpg/' rawimg/*
+          rename 's/.JPEG/.jpeg/' rawimg/*
+          rename 's/.GIF/.gif/' rawimg/*
+      
       # 安装相关插件，转换图片。
       - name: Install & Convert
         run: |
@@ -38,22 +53,16 @@ jobs:
         run: |
           git config --global user.email "qyu0615@gmail.com"
           git config --global user.name "cherbim"
+          git add -A
+          git commit -m "update version"
+          git push origin main
           npm version patch
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-      # 更新version
-      - name: Push
-        run: |
-          git add -A
-          git commit -m "update version"
-          git push origin main
+     
           
-      # 设置python
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v1
-        with:
-          python-version: 3.7 
+      
           
       # pip安装requests
       - name: Pip install requests
