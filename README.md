@@ -25,7 +25,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ##### 安装教程
 登录你的github账号，新建仓库，设置为私有（保护隐私），下载代码并push到自己仓库
 
-手动操作过程：
+不会push的请按以下过程手动操作：
 
 第一步： https://github.com/w2r/npm_image_url/archive/refs/heads/main.zip 下载代码并解压，点击Add file，选择上传post2tg.py和package.json文件到仓库
 
