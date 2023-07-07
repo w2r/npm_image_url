@@ -2,9 +2,7 @@
 
 #### 利用npm和github action搭建一个简易图床
 
-##### 目前发现bug： 
-
-cwebp转换图片格式大写结尾（JPG）失败，请确认上传图片格式为小写字母
+##### 友情提示： 
 
 不要fork仓库，容易泄露隐私，自己下载代码，新建仓库并上传代码
 
@@ -20,13 +18,14 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 - 安装python3及依赖库
 - 增加telegram推送，每次github上传图片后后，自动发送图片链接到telegram（相当于备份图片）
 - 更改action的触发方式， release --> push
+- 删除压缩图片代码，直接使用原图
 
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
 ##### 安装教程
 登录你的github账号，新建仓库，设置为私有（保护隐私），下载代码并push到自己仓库
 
-不会push的请看下面教程手动复制粘贴：
+手动操作过程：
 
 第一步： https://github.com/w2r/npm_image_url/archive/refs/heads/main.zip 下载代码并解压，点击Add file，选择上传post2tg.py和package.json文件到仓库
 
@@ -34,7 +33,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 ![](https://cdn.jsdelivr.net/npm/w2r@1.2.44/rawimg/cherbim_2023-07-07_01-09-10.webp)
 
 
-第三步： 复制.github/workflows/main.yml里面的内容，然后点击action，选择new workflow，点击 set up a workflow yourself，把前面复制main.yml内容粘贴进去，最后保存
+第三部： 复制.github/workflows/main.yml里面的内容，然后点击action，选择new workflow，点击 set up a workflow yourself，把前面复制main.yml内容粘贴进去，最后保存
 ![](https://cdn.jsdelivr.net/npm/w2r@1.2.43/rawimg/cherbim_2023-07-07_01-00-23.webp)
 
 
