@@ -18,7 +18,7 @@ github action 运行代码来源于：[我的图床解决方案 - YFun's Blog](h
 - 安装python3及依赖库
 - 增加telegram推送，每次github上传图片后后，自动发送图片链接到telegram（相当于备份图片）
 - 更改action的触发方式， release --> push
-- 删除压缩图片代码，直接使用原图
+
 
 ##### 准备工作
 首先注册npm账号，注册地址：[npm注册](https://www.npmjs.com/)，注册后点击右上角的头像，然后选择Access Token，点击页面中的Generate New Token，classic token，生成Access Token，格式类似： npm_hF0123456789****
