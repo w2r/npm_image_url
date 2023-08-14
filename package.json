@@ -1,6 +1,6 @@
 {
-          "name": "w2r",
-          "version": "2023.8.19",
-          "description": "版本配置文件，每次图片发布后github action会自动修改",
-          "author": "cherbim"
-}
+                    "name": "w2r",
+                    "version": "2023.8.19",
+                    "description": "版本配置文件，每次图片发布后github action会自动修改",
+                    "author": "cherbim"
+                    }
